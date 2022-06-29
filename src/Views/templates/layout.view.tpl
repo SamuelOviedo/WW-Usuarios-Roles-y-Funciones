@@ -30,6 +30,7 @@
         <li><a href="index.php?page=sec_login"><i class="fas fa-sign-in-alt"></i>&nbsp;Iniciar Sesión</a></li>
         <li><a href="index.php?page=sec_register"><i class="fas fa-user-plus"></i>&nbsp;Crear Cuenta</a></li>
         <li><a href="index.php?page=Mnt_Scores"><i class="fas fa-sign-in-alt"></i>&nbsp;Scores</a></li>
+        <li><a href="index.php?page=Mnt_Funciones"><i class="fas fa-sign-in-alt"></i>&nbsp;Funciones</a></li>
       </ul>
     </nav>
   </header>
