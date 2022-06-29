@@ -10,7 +10,7 @@ use Dao\Mnt\Funciones as DaoFunciones;
 use Views\Renderer;
 
 
-class Scores extends PublicController
+class Funciones extends PublicController
 {
     /**
      * Index run method

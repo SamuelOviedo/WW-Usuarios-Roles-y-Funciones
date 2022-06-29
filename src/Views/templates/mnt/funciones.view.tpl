@@ -1,4 +1,4 @@
-<h1>Seccion de Scores</h1>
+<h1>Seccion de Funciones</h1>
 <section>
 
 </section>

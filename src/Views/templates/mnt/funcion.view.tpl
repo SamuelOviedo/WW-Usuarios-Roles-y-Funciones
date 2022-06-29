@@ -5,6 +5,15 @@
     <input type="hidden" name="crsf_token" value="{{crsf_token}}" />
     <input type="hidden" name="fncod" value="{{fncod}}" />
     <fieldset>
+      <label for="fncod">Código</label>
+      <input {{if readonly}}readonly{{endif readonly}} type="text" id="fncod" name="fncod" placeholder="Código Función" value="{{fncod}}"/>
+      {{if error_fncod}}
+        {{foreach error_fncod}}
+          <div class="error">{{this}}</div>
+        {{endfor error_fncod}}
+      {{endif error_fncod}}
+    </fieldset>
+    <fieldset>
       <label for="fndsc">Descripción</label>
       <input {{if readonly}}readonly{{endif readonly}} type="text" id="fndsc" name="fndsc" placeholder="Descripcion" value="{{fndsc}}"/>
       {{if error_fndsc}}

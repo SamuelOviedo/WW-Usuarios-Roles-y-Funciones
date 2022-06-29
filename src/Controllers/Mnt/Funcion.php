@@ -46,6 +46,7 @@ class Funcion extends PublicController
         $this->viewData["crsf_token"] = "";
 
         $this->viewData["fncod"] = "";
+        $this->viewData["error_fncod"] = array();
 
         $this->viewData["fndsc"] = "";
         $this->viewData["error_fndsc"] = array();
@@ -53,8 +54,8 @@ class Funcion extends PublicController
         $this->viewData["fntyp"] = "";
         $this->viewData["fntypArr"] = array();
 
-        $this->viewData["fnrolest"] = "";
-        $this->viewData["fnrolestArr"] = array();
+        $this->viewData["fnest"] = "";
+        $this->viewData["fnestArr"] = array();
 
         $this->viewData["btnEnviarText"] = "Guardar";
         $this->viewData["readonly"] = false;
@@ -77,7 +78,7 @@ class Funcion extends PublicController
             array("value" => "USR", "text" => "Usuario"),
         );
 
-        $this->viewData["fnrolestArr"] = $this->arrEstados;
+        $this->viewData["fnestArr"] = $this->arrEstados;
         $this->viewData["fntypArr"] = $this->arrTipos;
 
     }
@@ -116,6 +117,12 @@ class Funcion extends PublicController
             );
         }
 
+        if (Validators::IsEmpty($this->viewData["fncod"])) {
+            $this->viewData["error_fncod"][]
+                = "El código es requerido";
+            $hasErrors = true;
+        }
+
         if (Validators::IsEmpty($this->viewData["fndsc"])) {
             $this->viewData["error_fndsc"][]
                 = "La descripción es requerida";
@@ -129,6 +136,7 @@ class Funcion extends PublicController
             switch($this->viewData["mode"]) {
             case 'INS':
                 $result = Funciones::insert(
+                    $this->viewData["fncod"],
                     $this->viewData["fndsc"],
                     $this->viewData["fnest"],
                     $this->viewData["fntyp"]

@@ -35,20 +35,24 @@
         }
 
         public static function insert(
+            $fncod,
             $fndsc,
             $fnest,
             $fntyp
         ) {
             $sqlstr = "INSERT INTO `funciones`
-            (`fndsc`,
+            (`fncod`,
+            `fndsc`,
             `fnest`,
             `fntyp`)
             VALUES
-            (:fndsc,
+            (:fncod,
+            :fndsc,
             :fnest,
             :fntyp);";
     
             $sqlParams = [
+                "fncod" => $fncod ,
                 "fndsc" => $fndsc ,
                 "fnest" => $fnest ,
                 "fntyp" => $fntyp
