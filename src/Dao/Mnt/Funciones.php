@@ -29,7 +29,7 @@
         }
 
         public static function getById(string $fncod){
-            $sqlstr = "SELECT * from `funciones` where fnCod=:fncod;";
+            $sqlstr = "SELECT * from `funciones` where fncod=:fncod;";
             $sqlParams = array("fncod" => $fncod);
             return self::obtenerUnRegistro($sqlstr, $sqlParams);
         }
@@ -84,7 +84,7 @@
 
     public static function delete($fncod)
     {
-        $sqlstr = "DELETE from `scores` where fncod = :fncod;";
+        $sqlstr = "DELETE from `funciones` where fncod = :fncod;";
         $sqlParams = array(
             "fncod" => $fncod
         );

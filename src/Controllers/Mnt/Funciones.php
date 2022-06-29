@@ -20,9 +20,9 @@ class Funciones extends PublicController
     public function run() :void
     {
        //code
-       $viewData=array();
-       $viewData["Funciones"] = DaoFunciones::getAll();
-       Renderer::render('mnt/Funciones',$viewData);
+        $viewData=array();
+        $viewData["Funciones"] = DaoFunciones::getAll();
+        Renderer::render('mnt/Funciones',$viewData);
     }
 
 }

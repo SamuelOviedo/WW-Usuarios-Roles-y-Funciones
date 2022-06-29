@@ -1,6 +1,6 @@
 <?php
 
- namespace Controllers\Mnt;
+namespace Controllers\Mnt;
 
 // ---------------------------------------------------------------
 // Sección de imports
@@ -95,8 +95,8 @@ class Funcion extends PublicController
             }
         }
         if ($this->viewData["mode"] !== "INS" && isset($_GET["id"])) {
-            $this->viewData["usercod"] = intval($_GET["id"]);
-            $tmpFuncion = Funciones::getById($this->viewData["usercod"]);
+            $this->viewData["fncod"] = $_GET["id"];
+            $tmpFuncion = Funciones::getById($this->viewData["fncod"]);
             error_log(json_encode($tmpFuncion));
             \Utilities\ArrUtils::mergeFullArrayTo($tmpFuncion, $this->viewData);
         }
