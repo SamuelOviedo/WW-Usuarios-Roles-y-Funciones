@@ -31,6 +31,7 @@
         <li><a href="index.php?page=sec_register"><i class="fas fa-user-plus"></i>&nbsp;Crear Cuenta</a></li>
         <li><a href="index.php?page=Mnt_Scores"><i class="fas fa-sign-in-alt"></i>&nbsp;Scores</a></li>
         <li><a href="index.php?page=Mnt_Funciones"><i class="fas fa-sign-in-alt"></i>&nbsp;Funciones</a></li>
+        <li><a href="index.php?page=Mnt_Roles"><i class="fas fa-sign-in-alt"></i>&nbsp;Roles</a></li>
       </ul>
     </nav>
   </header>
